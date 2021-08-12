@@ -1,0 +1,10 @@
+{
+  "APPLICATION_NAME": "Time Marker",
+  "HOME": {
+    "TIME_DURATION": "Time Duration",
+    "TASK_COMPLETED": "Task Completed"
+  },
+  "COMMON": {
+    "BACK": "Back"
+  }
+}

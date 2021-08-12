@@ -1,0 +1,9 @@
+{
+  "APPLICATION_NAME": "Time Marker",
+  "HOME": {
+    "TIME_DURATION": "Time Duration"
+  },
+  "COMMON": {
+    "BACK": "Back"
+  }
+}
