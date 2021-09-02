@@ -19,3 +19,8 @@ export {default as StopQuitIcon} from './StopQuitIcon'
 export {default as CheckIcon} from './CheckIcon'
 export {default as TimeFilledIcon} from './TimeFilledIcon'
 
+export {default as BarbellIcon} from './BarbellIcon'
+export {default as DesktopIcon} from './DesktopIcon'
+export {default as CodeIcon} from './CodeIcon'
+export {default as ReadBookIcon} from './ReadBookIcon'
+export {default as PlayIcon} from './PlayIcon'

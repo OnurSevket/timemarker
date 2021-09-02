@@ -23,8 +23,16 @@ export const TagText = styled.Text`
   font-family: ${({ theme }) => theme.fonts.regular};
   font-size:  ${({ theme }) => theme.metrics.px( theme.fontSizes.xLight)}px;
   color:  ${({ theme,color }) => color || theme.colors.Grey};
-`;
+  line-height: ${({ theme }) => theme.metrics.px( 20)}px;
+`;//TODO line height meselesini düşün!!!!!!
 
+export const ActItemTitleText = styled.Text`
+  font-family: ${({ theme }) => theme.fonts.medium};
+  font-size:  ${({ theme }) => theme.metrics.px( theme.fontSizes.light)}px;
+  color:  ${({ theme,color }) => color || theme.colors.BlackSolid};
+
+`;
+//margin: 8px 5px 5px 8px;
 // xLight : 12,
 // light : 14,
 // xSmall : 16,

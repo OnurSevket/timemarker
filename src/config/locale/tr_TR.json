@@ -1,9 +1,24 @@
 {
   "APPLICATION_NAME": "Time Marker",
   "HOME": {
-    "TIME_DURATION": "Time Duration"
+    "TIME_DURATION": "Time Duration",
+    "TASK": "Task",
+    "TODAY": "Today",
+    "SEE_ALL": "See All"
   },
   "COMMON": {
     "BACK": "Back"
+  },
+  "TIMER": {
+    "FINISH": "Finish",
+    "QUIT": "Quit",
+    "PAUSE": "Pause"
+  },
+  "REPORT": {
+    "MY_PRODUCTIVITY": "My Productivity",
+    "TASK_COMPLETED": "Task Completed",
+    "TIME_DURATION": "Time Duration",
+    "DAY": "Day",
+    "WEEK": "Week"
   }
 }
