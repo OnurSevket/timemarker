@@ -32,6 +32,14 @@ export const ActItemTitleText = styled.Text`
   color:  ${({ theme,color }) => color || theme.colors.BlackSolid};
 
 `;
+
+export const HomeTaskTitleText = styled.Text`
+  font-family: ${({ theme }) => theme.fonts.medium};
+  font-size:  ${({ theme }) => theme.metrics.px( theme.fontSizes.bold)}px;
+  color:  ${({ theme,color }) => color || theme.colors.Black};
+
+`;
+
 //margin: 8px 5px 5px 8px;
 // xLight : 12,
 // light : 14,

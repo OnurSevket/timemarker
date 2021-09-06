@@ -47,7 +47,7 @@ export const ActivityItem = ({...props})=>{
             </FlexBox>
             <MaxHeightBox
                 mainAxis={'space-between'}
-                crossAxis={'flex-end'}>
+                crossAxis={'flex-end'} color={undefined}>
                 <TagText color={theme.colors.Grey2}>{props.time}</TagText>
                 <PlayIcon/>
             </MaxHeightBox>
@@ -56,6 +56,9 @@ export const ActivityItem = ({...props})=>{
 }
 export const MaxHeightBox = styled(FlexBox)`
   height: 100%;
+  ${props => (props.color != undefined) && `
+        background: #008800;
+    `}
 `;
 
 export const MaxHeightMLBox = styled(MaxHeightBox)`

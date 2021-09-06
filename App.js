@@ -2,29 +2,25 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import AppLoading from 'expo-app-loading';
 import {useFonts} from 'expo-font';
-import {
-    AnalysisIcon
-    , AnalyticsIcon
-    , ArrowBackIcon
-    , CalendarIcon
-    , AddIcon
-    , TimeIcon
-    , MonitorIcon
-    , MoreIcon
-    , PieChartFilledIcon
-    , PieChartIcon
-    , PlusIcon
-    , RightArrowIcon
-    , StopWatchIcon
-    , TimeOutlineIcon
-    , UserIcon, PauseIcon, StopQuitIcon, CheckIcon, TimeFilledIcon
-} from "./src/components/atoms/Icons";
 import { ThemeProvider } from 'styled-components';
 import {theme} from "./src/styles/theme";
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import {HomeScreen, ReportScreen, TimerScreen,} from "./src/components/pages";
+import {
+    AddIcon,
+    PieChartFilledIcon,
+    PieChartIcon,
+    PlusIcon,
+    TimeFilledIcon,
+    TimeIcon,
+    TimeOutlineIcon
+} from "./src/components/atoms";
+import {CircleItem} from "./src/components/atoms/CircleItem";
 
-import i18n from "./src/config/i18n";
-import {ActivityItem, ReportItem} from "./src/components/molecules";
-import {FlexBox} from "./src/components/atoms";
+
+const Tab = createBottomTabNavigator();
 
 export default function App() {
 
@@ -39,46 +35,54 @@ export default function App() {
 
   return (
       <ThemeProvider theme={theme}>
-                <FlexBox flex={1} color={theme.colors.Background}>
-                {/*<StyledBox flex={1} direction={'row'}>*/}
+          <StatusBar backgroundColor={'transparent'} translucent/>
+          <NavigationContainer>
+              <Tab.Navigator
+                  initialRouteName="Home"
+                  screenOptions={{
+                      tabBarShowLabel: false,
+                      headerShown: false,
+                      tabBarStyle: {
+                          // display:'flex',
+                          position:'absolute',
+                          height: theme.metrics.px( 90),
+                          borderTopLeftRadius:theme.metrics.px( 30),
+                          borderTopRightRadius:theme.metrics.px( 30),
+                          backgroundColor:theme.colors.White,
+                          paddingBottom:theme.metrics.px(10)
+                          // shadowColor: 'transparent',//https://github.com/react-navigation/react-navigation/issues/3052#issuecomment-352812792
+                          // shadowOpacity: 0,
+                          // shadowRadius: 0,
+                          // shadowOffset: {
+                          //     height: 0,
+                          //     width: 0,
+                          // },
+                          // elevation: 0,
+                          // justifyContent:'flex-start',
+                          // alignItems:'flex-start',
+                      },
+                  }}>
+                  <Tab.Screen name="Home" component={HomeScreen} options={{
+                      tabBarIcon:({focused,color,size}) =>
+                          (
+                              focused ? <TimeFilledIcon/> : <TimeIcon/>
+                      ),
+                      tabBarItemStyle:{
 
-               {/*     <ReportItem
-                        icon={<CheckIcon/>}
-                        iconColor={theme.colors.Green}
-                        title={i18n.t('HOME.TASK_COMPLETED')}
-                        definition={'12'}/>
-                    <ReportItem
-                        icon={<TimeFilledIcon/>}
-                        iconColor={theme.colors.Blue}
-                        title={i18n.t('HOME.TIME_DURATION')}
-                        definition={'1h 46m'}/>*/}
-                    <ActivityItem
-                        name={'UI Design'}
-                        tag={['Work','Rasion Project']}
-                        time={'00:42:21'}/>
-                {/*</StyledBox>*/}
-                 {/*  <ActivityItem />*/}
-                    {/*
-                         <AnalysisIcon/>
-                         <AnalyticsIcon/>
-                         <ArrowBackIcon/>
-                         <CalendarIcon/>
-                         <AddIcon/>
-                         <TimeIcon/>
-                         <MonitorIcon/>
-                         <MoreIcon/>
-                         <PieChartFilledIcon/>
-                         <PieChartIcon/>
-                         <PlusIcon/>
-                         <RightArrowIcon/>
-                         <StopWatchIcon/>
-                         <TimeOutlineIcon/>
-                         <UserIcon/>
-                         <PauseIcon/>
-                         <StopQuitIcon/>
-                         <CheckIcon/>*/}
-                </FlexBox>
+                          // paddingLeft:20,
+                          // backgroundColor:theme.colors.Purple,
+                      }
+                  }} />
+                  <Tab.Screen name="Timer" component={TimerScreen} options={{
+                      tabBarIcon:({focused,color,size})=>( focused ?  <CircleItem height={44} width={44} color={theme.colors.Black}><AddIcon/></CircleItem> :<PlusIcon/>  )
+                  }}/>
+                  <Tab.Screen name="Report" component={ReportScreen} options={{
+                      tabBarIcon:({focused,color,size})=>( focused ? <PieChartFilledIcon/> : <PieChartIcon/> )
+                  }}/>
+              </Tab.Navigator>
+          </NavigationContainer>
         </ThemeProvider>
   );
 }
 
+//`${({ theme  }) => theme.metrics.px( 76)}`

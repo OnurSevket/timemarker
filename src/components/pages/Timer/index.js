@@ -4,7 +4,7 @@ import {ActItemTitleText, FlexBox} from "../../atoms";
 
 export const TimerScreen = ()=>{
     return(
-        <FlexBox>
+        <FlexBox flex={1}>
             <ActItemTitleText>Timer Screen</ActItemTitleText>
         </FlexBox>
     );
