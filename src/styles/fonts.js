@@ -1,20 +1,19 @@
 export const fonts = {
-    regular: 'Rubik-Regular' ,
-    medium: 'Rubik-Medium' ,
+  regular: "Rubik-Regular",
+  medium: "Rubik-Medium",
 };
 
-
 export const fontSizes = {
-    xLight : 12,
-    light : 14,
-    xSmall : 16,
-    small : 18,
-    regular : 20,
-    bold : 24,
-    xBold : 32,
-    xxlBold : 40,
-    black : 48,
-}
+  xLight: 12,
+  light: 14,
+  xSmall: 16,
+  small: 18,
+  regular: 20,
+  bold: 24,
+  xBold: 32,
+  xxlBold: 40,
+  black: 48,
+};
 
 /*  medium : 14,
     medium : 18,

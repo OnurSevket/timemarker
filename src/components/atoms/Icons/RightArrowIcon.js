@@ -1,10 +1,19 @@
 import React from "react";
-import Svg,{Path} from 'react-native-svg'
+import Svg, { Path } from "react-native-svg";
 
-export default function RightArrowIcon(){
-    return(
-        <Svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<Path d="M15.4998 11.2L9.7998 5.6C9.3998 5.2 8.7998 5.2 8.3998 5.6C7.9998 6 7.9998 6.6 8.3998 7L13.2998 12L8.3998 17C7.9998 17.4 7.9998 18 8.3998 18.4C8.5998 18.6 8.7998 18.7 9.0998 18.7C9.39981 18.7 9.5998 18.6 9.7998 18.4L15.4998 12.8C15.8998 12.3 15.8998 11.7 15.4998 11.2C15.4998 11.3 15.4998 11.3 15.4998 11.2Z" fill="black"/>
-        </Svg>
-    );
+export default function RightArrowIcon() {
+  return (
+    <Svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <Path
+        d="M15.5 11.2L9.80005 5.60001C9.40005 5.20001 8.80005 5.20001 8.40005 5.60001C8.00005 6.00001 8.00005 6.60001 8.40005 7.00001L13.3 12L8.40005 17C8.00005 17.4 8.00005 18 8.40005 18.4C8.60005 18.6 8.80005 18.7 9.10005 18.7C9.40005 18.7 9.60005 18.6 9.80005 18.4L15.5 12.8C15.9 12.3 15.9 11.7 15.5 11.2C15.5 11.3 15.5 11.3 15.5 11.2Z"
+        fill="white"
+      />
+    </Svg>
+  );
 }

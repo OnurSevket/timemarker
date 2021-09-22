@@ -2,7 +2,7 @@ import React from "react";
 import { TagText } from "../../atoms/Text";
 import { MaxWidthBox } from "../StyledBox";
 
-export const Tag = ({ ...props }) => {
+export const Chart = ({ ...props }) => {
   return (
     <MaxWidthBox
       // height={24}
